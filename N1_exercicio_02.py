@@ -9,23 +9,45 @@ aumenta_salario de cada um.(2,0)
 """
 
 class Funcionario:
-    nome = ""
-    idade = 0
-    salario = 0.0
+    def __init__(self, nome, idade, salario):
+        self.nome = nome
+        self.idade = idade
+        self.salario = salario
+        self.aumento = 0
 
-    def aumenta_salario(aumento):
-        salario_novo = Funcionario.salario + aumento
-        return  salario_novo
+    def aumenta_salario(self):
+        self.salario = self.salario + self.aumento
 
-    class Programador:
-        valor_aumento = 20
-        aumenta_salario(valor_aumento)
+class Programador(Funcionario):
+    def __init__(self, nome, idade, salario):
+        Funcionario.__init__(self, nome, idade, salario)
+        self.aumento = 20
 
-class Analista:
-    valor_aumento = 30
-    Funcionario.aumenta_salario(valor_aumento)
+class Analista(Funcionario):
+    def __init__(self, nome, idade, salario):
+        Funcionario.__init__(self, nome, idade, salario)
+        self.aumento = 30
+
+class Teste(Funcionario):
+    def __init__(self, nome, idade, salario):
+        Funcionario.__init__(self, nome, idade, salario)
+        self.aumento = 90
 
 
-print(Programador.conta)
-print(Programador.salario)
-print(Analista.salario)
+pessoa_dev = Programador("Eduardo kazenski", 29, 1500)
+print("Funcionario: {0}".format(pessoa_dev.nome))
+print("Salario normal: {0}".format(pessoa_dev.salario))
+pessoa_dev.aumenta_salario()
+print("Salario com acrecimo: {0}".format(pessoa_dev.salario))
+
+pessoa_analyst = Analista("Lucicreide", 30, 2500)
+print("Funcionario: {0}".format(pessoa_analyst.nome))
+print("Salario normal: {0}".format(pessoa_analyst.salario))
+pessoa_analyst.aumenta_salario()
+print("Salario com acrecimo: {0}".format(pessoa_analyst.salario))
+
+bckp_teste = Teste("pessoa cadastrada", 1, 1)
+print("Funcionario: {0}".format(bckp_teste.nome))
+print("Salario normal: {0}".format(bckp_teste.salario))
+pessoa_analyst.aumenta_salario()
+print("Salario com acrecimo: {0}".format(bckp_teste.salario))

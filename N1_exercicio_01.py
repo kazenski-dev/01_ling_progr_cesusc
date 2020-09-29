@@ -13,6 +13,7 @@ soma = 0
 menor = 999
 maior = 0
 contador = 0
+media = 0
 
 while num_refens != -1:
     try:
@@ -37,13 +38,26 @@ while num_refens != -1:
         print("Favor Insira somente números válidos: (inteiros)")
 
 media = sum(lista_refens)/contador
-
-lista_refens.sort()
-
-for i in lista_refens:
-    if i <= media or i == media:
-        ideal = i
+aux_media = int(media)
+print(aux_media)
 
 print("\nMédia da lista: ", media)
+print("\nO maior valor é: ", maior)
+print("\nO menor valor é: ", menor)
+
+for i in num_refens:
+    if num_refens[i] < aux_media:
+        aux = menor
+        while aux <= aux_media:
+            if aux >= aux_media:
+                ideal = aux
+            aux += 1
+    if num_refens[i] > aux_media:
+        aux = maior
+        while aux <= aux_media:
+            if aux >= aux_media:
+                ideal = aux
+            aux -= 1
+
 print("\nValor mais próximo: ", ideal)
 

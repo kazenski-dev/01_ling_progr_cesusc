@@ -57,13 +57,12 @@ while teste == True:
     try:
         mensagem = int(input(">>> "))
         cod_bruto.append(mensagem)
-        validar = str(input("Efetuar tradução? 's' - sim | 'n' - nao "))
+        validar = str(input("Efetuar tradução? 's' - sim"))
         if validar == "s":
             teste = False
-        else:
-            teste = True
+
     except(ValueError):
-        print("Você digitou algum valor inválido.\nReconetando...")
+        print("Você digitou algum valor inválido.\nReconectando...")
         time.sleep(2)
 
 tam_codigo = len(cod_bruto)

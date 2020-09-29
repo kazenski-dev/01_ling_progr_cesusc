@@ -24,6 +24,7 @@ def cria_dados():
   cadeia_num = []
   for n in range(4):
     cadeia_num.append(randint(0,1000))
+  print(cadeia_num)
   print("A soma dos 4 números é igual a: ", sum(cadeia_num))
 
 cria_dados()
