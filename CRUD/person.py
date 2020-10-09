@@ -1,3 +1,5 @@
+from menu import *
+
 class Pessoa:
 
     def __init__(self, nome, cpf, email, atividade): 
@@ -6,4 +8,3 @@ class Pessoa:
         self.email = email
         self.atividade = atividade
         pass
-
