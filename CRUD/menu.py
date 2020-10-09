@@ -1,12 +1,13 @@
+from person import *
+
 class Interface:
 
-    pessoas = []
+    global pessoas = {'nomes': nomes[], 'cpfs': cpfs[], 'emails': emails[], 'atividades': atividades[]}
 
     def busca_padrao(self):
         while True:
-            busca_usuario = input("\nInsira o nome, cpf ou email da pessoa para realizar a busca detalhada...\n")
+            #busca_usuario = input("\nInsira o nome, cpf ou email da pessoa para realizar a busca detalhada...\n")
             pass
-
 
     def listar_pessoa(self):
         pass
@@ -15,8 +16,15 @@ class Interface:
         nome_pessoa = input('Qual é o nome da pessoa?\n')
         cpf_pessoa = input('Qual é o cpf da pessoa?\n')
         email_pessoa = input('Qual é o email da pessoa?\n')
+        atividade = 1
 
-        self.pessoas.append(Pessoa(nome_pessoa, cpf_pessoa, email_pessoa))
+        print('\n\nEfetuando novo Cadastro...\n')
+
+        cadastro_novo = Pessoa(nome_pessoa, cpf_pessoa, email_pessoa, atividade)
+        pessoas.update(cadastro_novo.nome, cadastro_novo.cpf, cadastro_novo.email, cadastro_novo.atividade)
+        print(cadastro_novo)
+
+        self.pessoas.append(Pessoa(nome_pessoa, cpf_pessoa, email_pessoa, atividade))
         print('Pessoa cadastrada com sucesso!')
 
     def alterar_pessoa(self):

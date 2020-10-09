@@ -33,3 +33,13 @@ determinar se ele foi excluído ou não.
 ● Utilize uma classe que representa o menu
 ● Toda a manipulacao de dados sera na memoria
 ● Efetuar testes unitarios
+
+
+
+
+MINHAS ANOTAÇÕES:
+
+1- Método de busca com dicionario
+Os dicionários possuem um método específico para busca de valores, o get(), no qual podemos passar como parâmetros a chave que queremos e um valor padrão para retornar caso essa chave não seja encontrada:
+print(contatos.get('Yan', 'Contato não encontrado'))
+print(contatos.get('João', 'Contato não encontrado'))

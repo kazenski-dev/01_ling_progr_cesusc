@@ -1,6 +1,6 @@
 class Pessoa:
 
-    def __init__(self, nome, cpf, email):  # Assim, você pode facilmente criar um pessoa
+    def __init__(self, nome, cpf, email, atividade): 
         self.nome = nome
         self.cpf = cpf
         self.email = email
